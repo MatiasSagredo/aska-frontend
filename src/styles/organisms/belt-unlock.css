@@ -1,0 +1,211 @@
+.belt {
+  position: relative;
+  padding: 0 clamp(1.5rem, 6vw, 6rem);
+  display: grid;
+  gap: clamp(2.5rem, 6vw, 4rem);
+  z-index: 1;
+}
+
+.belt__header {
+  max-width: 720px;
+  display: grid;
+  gap: 1.2rem;
+}
+
+.belt__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(215, 38, 61, 0.4);
+  color: var(--color-primary);
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.belt__header h2 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(2.3rem, 4.5vw, 3.5rem);
+  text-transform: uppercase;
+}
+
+.belt__header p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  max-width: 580px;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+}
+
+.belt__selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.belt__chip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.75rem 1.6rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--color-text-secondary);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.belt__chip i {
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+.belt__chip:hover {
+  transform: translateY(-2px);
+  border-color: rgba(215, 38, 61, 0.35);
+  color: var(--color-text-primary);
+}
+
+.belt__chip--active {
+  background: var(--belt-gradient);
+  color: #050505;
+  border-color: transparent;
+  box-shadow: 0 16px 32px rgba(215, 38, 61, 0.28);
+}
+
+.belt__chip--active i {
+  opacity: 0.9;
+}
+
+.belt__panel {
+  position: relative;
+  display: grid;
+  gap: clamp(1.8rem, 4vw, 2.4rem);
+  padding: clamp(1.8rem, 4vw, 2.8rem);
+  border-radius: 26px;
+  background: rgba(12, 12, 16, 0.85);
+  border: 1px solid rgba(215, 38, 61, 0.18);
+  backdrop-filter: blur(12px);
+}
+
+.belt__panel-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.belt__panel-header h3 {
+  margin: 0;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.belt__panel-header p {
+  margin: 0.4rem 0 0;
+  color: var(--color-text-secondary);
+  max-width: 440px;
+}
+
+.belt__panel-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+  padding: 1.1rem 1.5rem;
+  border-radius: 20px;
+  background: var(--belt-gradient);
+  color: #050505;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.belt__perks {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+
+.belt__perks li {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  font-size: 1rem;
+  color: var(--color-text-primary);
+}
+
+.belt__perks li i {
+  margin-top: 0.2rem;
+  color: var(--color-primary);
+}
+
+.belt__perks li span {
+  color: var(--color-text-secondary);
+}
+
+.belt__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.belt__cta {
+  padding: 0.8rem 2.2rem;
+  border-radius: 999px;
+  border: none;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.belt__cta--primary {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-soft));
+  color: #050505;
+  box-shadow: 0 18px 32px rgba(215, 38, 61, 0.35);
+}
+
+.belt__cta--secondary {
+  background: transparent;
+  color: var(--color-text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.belt__cta:hover {
+  transform: translateY(-2px);
+}
+
+.belt__cta--secondary:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 720px) {
+  .belt__panel-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .belt__panel-badge {
+    min-width: auto;
+  }
+
+  .belt__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .belt__cta {
+    width: 100%;
+  }
+}
