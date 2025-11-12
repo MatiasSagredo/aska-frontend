@@ -1,0 +1,21 @@
+.hero-highlight {
+  backdrop-filter: blur(10px);
+  padding: 1.4rem 1.6rem;
+  border-radius: 18px;
+  background: rgba(15, 15, 18, 0.65);
+  border: 1px solid rgba(215, 38, 61, 0.18);
+  display: grid;
+  gap: 0.35rem;
+}
+
+.hero-highlight strong {
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.hero-highlight span {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}

@@ -1,0 +1,56 @@
+.gear-card {
+  position: relative;
+  padding: clamp(1.8rem, 3vw, 2.4rem);
+  border-radius: 22px;
+  background: rgba(12, 12, 16, 0.8);
+  border: 1px solid rgba(215, 38, 61, 0.18);
+  display: grid;
+  gap: 1.2rem;
+  overflow: hidden;
+  transition: transform 180ms ease, border-color 180ms ease;
+}
+
+.gear-card h3 {
+  margin: 0;
+  font-size: 1.45rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.gear-card p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.gear-card__tags {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.gear-card__button {
+  justify-self: flex-start;
+}
+
+.gear-card__glow {
+  position: absolute;
+  inset: -20% -40% -40% -20%;
+  background: radial-gradient(circle at top right, rgba(215, 38, 61, 0.35), transparent 55%);
+  opacity: 0;
+  transform: translate3d(0, 0, 0);
+  transition: opacity 220ms ease;
+}
+
+.gear-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(215, 38, 61, 0.35);
+}
+
+.gear-card:hover .gear-card__glow {
+  opacity: 1;
+}

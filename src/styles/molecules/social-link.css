@@ -1,0 +1,18 @@
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(215, 38, 61, 0.15);
+  color: var(--color-text-primary);
+  transition: transform 180ms ease, background 180ms ease, border 180ms ease;
+}
+
+.social-link:hover {
+  transform: translateY(-2px);
+  background: rgba(215, 38, 61, 0.25);
+  border-color: rgba(215, 38, 61, 0.4);
+}

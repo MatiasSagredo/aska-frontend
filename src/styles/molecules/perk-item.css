@@ -1,0 +1,16 @@
+.perk-item {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  font-size: 1rem;
+  color: var(--color-text-primary);
+}
+
+.perk-item__icon {
+  margin-top: 0.2rem;
+  color: var(--color-primary);
+}
+
+.perk-item span {
+  color: var(--color-text-secondary);
+}

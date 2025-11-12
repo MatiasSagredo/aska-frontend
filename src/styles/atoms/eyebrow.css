@@ -1,0 +1,20 @@
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(215, 38, 61, 0.4);
+  color: var(--color-primary);
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.eyebrow--center {
+  justify-content: center;
+}
+
+.eyebrow--end {
+  justify-content: flex-end;
+}
