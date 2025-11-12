@@ -10,6 +10,7 @@
   background: rgba(5, 5, 7, 0.85);
   border-bottom: 1px solid rgba(215, 38, 61, 0.18);
   backdrop-filter: blur(14px);
+  overflow: visible;
 }
 
 .header__brand {
@@ -28,6 +29,29 @@
 .header__brand:focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 4px;
+}
+
+.header__menu-toggle {
+  display: none;
+  border: none;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--color-text-primary);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 150ms ease, transform 150ms ease, color 150ms ease;
+}
+
+.header__menu-toggle:hover {
+  background: rgba(215, 38, 61, 0.25);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.header__menu-toggle:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
 }
 
 .header__logo {
@@ -115,19 +139,70 @@
   border-color: rgba(215, 38, 61, 0.55);
 }
 
+.header__nav-responsive {
+  display: none;
+}
+
+.header__nav-responsive button {
+  border: none;
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  transition: background 150ms ease, color 150ms ease;
+}
+
+.header__nav-responsive button:hover {
+  background: rgba(215, 38, 61, 0.22);
+  color: #fff;
+}
+
+.header__responsive-auth {
+  margin-top: 0.5rem;
+  border: 1px solid rgba(215, 38, 61, 0.35) !important;
+}
+
 @media (max-width: 900px) {
   .header {
     flex-wrap: wrap;
+    align-items: center;
   }
 
   .header__nav {
-    order: 3;
-    width: 100%;
-    justify-content: center;
+    display: none;
   }
 
   .header__auth {
-    margin-left: auto;
+    display: none;
+  }
+
+  .header__menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header__nav-responsive {
+    position: absolute;
+    top: calc(100% + 0.75rem);
+    right: clamp(1.5rem, 6vw, 6rem);
+    left: clamp(1.5rem, 6vw, 6rem);
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    border-radius: 18px;
+    background: rgba(5, 5, 7, 0.95);
+    border: 1px solid rgba(215, 38, 61, 0.2);
+    box-shadow: 0 18px 34px rgba(0, 0, 0, 0.4);
+  }
+
+  .header__nav-responsive.is-open {
+    display: flex;
   }
 }
 
@@ -136,20 +211,8 @@
     gap: 1rem;
   }
 
-  .header__nav {
-    gap: 0.8rem;
-  }
-
-  .header__nav button {
-    letter-spacing: 0.12em;
-  }
-
-  .header__auth {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .header__auth-info {
-    text-align: left;
+  .header__nav-responsive {
+    right: clamp(1rem, 6vw, 4rem);
+    left: clamp(1rem, 6vw, 4rem);
   }
 }
