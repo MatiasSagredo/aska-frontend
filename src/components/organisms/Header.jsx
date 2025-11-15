@@ -40,11 +40,17 @@ function Header({ onAuthTrigger, onNavigate }) {
         <i className="fa-solid fa-ellipsis" aria-hidden="true" />
       </button>
       <nav className="header__nav" aria-label="Navegación principal">
+        <button type="button" onClick={() => handleNavigation('top')}>
+          Inicio
+        </button>
         <button type="button" onClick={() => handleNavigation('bundles')}>
           Niveles
         </button>
         <button type="button" onClick={() => handleNavigation('colecciones')}>
           Colecciones
+        </button>
+        <button type="button" onClick={() => handleNavigation('catalogo')}>
+          Catálogo
         </button>
         <button type="button" onClick={() => handleNavigation('contacto')}>
           Contacto
@@ -74,11 +80,17 @@ function Header({ onAuthTrigger, onNavigate }) {
         className={`header__nav-responsive${isMenuOpen ? ' is-open' : ''}`}
         aria-label="Navegación móvil"
       >
+        <button type="button" onClick={() => handleNavigation('top')}>
+          Inicio
+        </button>
         <button type="button" onClick={() => handleNavigation('bundles')}>
           Niveles
         </button>
         <button type="button" onClick={() => handleNavigation('colecciones')}>
           Colecciones
+        </button>
+        <button type="button" onClick={() => handleNavigation('catalogo')}>
+          Catálogo
         </button>
         <button type="button" onClick={() => handleNavigation('contacto')}>
           Contacto

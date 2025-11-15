@@ -1,29 +1,34 @@
+import PropTypes from 'prop-types'
 import '../../styles/organisms/gear-showcase.css'
 
 const gearCategories = [
   {
+    id: 'combate-pro',
     name: 'Combate Pro',
     description: 'Guantes, vendas y protecciones homologadas para MMA, boxeo y muay thai.',
     tags: ['MMA', 'Muay Thai', 'Boxeo'],
   },
   {
+    id: 'entrenamiento-funcional',
     name: 'Entrenamiento funcional',
     description: 'Kettlebells, cuerdas y sacos de potencia pensados para rutinas explosivas.',
     tags: ['Fuerza', 'Cardio', 'HIIT'],
   },
   {
+    id: 'textil-tecnico',
     name: 'Textil técnico',
     description: 'Prendas de compresión y uniformes resistentes con diseños exclusivos Aska.',
     tags: ['Rashguards', 'Doboks', 'Compresión'],
   },
   {
+    id: 'suplementos-recovery',
     name: 'Suplementos y recovery',
     description: 'Apoya tu rendimiento con nutrición y accesorios de masaje de grado deportivo.',
     tags: ['Proteínas', 'Electrolitos', 'Recovery'],
   },
 ]
 
-function GearShowcase() {
+function GearShowcase({ onCatalogNavigate }) {
   return (
     <section className="gear" id="colecciones">
       <div className="gear__header">
@@ -46,7 +51,11 @@ function GearShowcase() {
                 <li key={tag}>{tag}</li>
               ))}
             </ul>
-            <button type="button" className="gear__cta">
+            <button
+              type="button"
+              className="gear__cta"
+              onClick={() => onCatalogNavigate?.(category.id)}
+            >
               Ver catálogo
             </button>
           </article>
@@ -54,6 +63,14 @@ function GearShowcase() {
       </div>
     </section>
   )
+}
+
+GearShowcase.propTypes = {
+  onCatalogNavigate: PropTypes.func,
+}
+
+GearShowcase.defaultProps = {
+  onCatalogNavigate: undefined,
 }
 
 export default GearShowcase

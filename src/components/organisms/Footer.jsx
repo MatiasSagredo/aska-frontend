@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import '../../styles/organisms/footer.css'
 
 const socials = [
@@ -20,11 +21,11 @@ const contactInfo = [
   { label: 'Av. Rendimiento 45, Madrid', icon: 'fa-location-dot' },
 ]
 
-function Footer() {
+function Footer({ includeAnchorId }) {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="footer" id="contacto">
+    <footer className="footer" id={includeAnchorId ? 'contacto' : undefined}>
       <div className="footer__gradient" aria-hidden="true" />
       <div className="footer__container">
         <div className="footer__brand">
@@ -88,7 +89,7 @@ function Footer() {
       </div>
 
       <div className="footer__legal">
-  <span>© {currentYear} Aska Gear Supply. Todos los derechos reservados.</span>
+        <span>© {currentYear} Aska Gear Supply. Todos los derechos reservados.</span>
         <div className="footer__legal-links">
           <a href="#privacidad">Política de privacidad</a>
           <a href="#terminos">Términos y condiciones</a>
@@ -96,6 +97,14 @@ function Footer() {
       </div>
     </footer>
   )
+}
+
+Footer.propTypes = {
+  includeAnchorId: PropTypes.bool,
+}
+
+Footer.defaultProps = {
+  includeAnchorId: true,
 }
 
 export default Footer

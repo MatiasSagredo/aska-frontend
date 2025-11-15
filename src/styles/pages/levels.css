@@ -1,0 +1,205 @@
+.levels {
+  position: relative;
+  display: grid;
+  gap: clamp(4rem, 7vw, 6rem);
+  padding: 0 clamp(2rem, 6vw, 5rem) clamp(6rem, 10vw, 8rem);
+}
+
+.levels__intro {
+  max-width: min(60ch, 90vw);
+  display: grid;
+  gap: clamp(1rem, 2vw, 1.6rem);
+}
+
+.levels__eyebrow {
+  font-size: 0.82rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--color-accent-soft, #ff2955);
+}
+
+.levels__intro h1 {
+  font-size: clamp(2.3rem, 4vw, 3.1rem);
+  line-height: 1.1;
+  color: var(--color-text-primary, #f5f5f5);
+}
+
+.levels__intro p {
+  color: var(--color-text-secondary, #d0d0d0);
+  font-size: clamp(1rem, 1.3vw, 1.12rem);
+  max-width: 52ch;
+}
+
+.levels__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.levels__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(15, 15, 15, 0.75);
+  color: var(--color-text-secondary, #d6d6d6);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.levels__chip:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 41, 85, 0.35);
+  color: var(--color-text-primary, #ffffff);
+}
+
+.levels__chip.is-active {
+  background: var(--levels-gradient);
+  color: #050505;
+  border-color: transparent;
+  box-shadow: 0 16px 32px rgba(255, 41, 85, 0.28);
+}
+
+.levels__panel {
+  display: grid;
+  gap: clamp(1.8rem, 3.5vw, 2.6rem);
+  padding: clamp(2.2rem, 4vw, 3rem);
+  border-radius: 34px;
+  background: rgba(10, 10, 10, 0.82);
+  border: 1px solid rgba(255, 41, 85, 0.22);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 41, 85, 0.08),
+    0 32px 60px rgba(5, 5, 5, 0.45);
+}
+
+.levels__panel-header {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.levels__badge {
+  justify-self: flex-start;
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 41, 85, 0.4);
+  background: var(--levels-gradient);
+  color: #050505;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.levels__panel-header h2 {
+  font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+}
+
+.levels__panel-header p {
+  color: var(--color-text-secondary, #cbcbcb);
+  max-width: 58ch;
+}
+
+.levels__perks {
+  list-style: none;
+  display: grid;
+  gap: 0.9rem;
+  padding: 0;
+  margin: 0;
+}
+
+.levels__perks li {
+  display: flex;
+  gap: 0.7rem;
+  align-items: flex-start;
+  color: var(--color-text-secondary, #d6d6d6);
+}
+
+.levels__perks i {
+  color: #ff6f48;
+  margin-top: 0.25rem;
+}
+
+.levels__bundle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: clamp(1.5rem, 3vw, 2.4rem);
+}
+
+.levels__bundle-card {
+  background: rgba(12, 12, 12, 0.88);
+  border-radius: 26px;
+  border: 1px solid rgba(255, 41, 85, 0.2);
+  padding: clamp(1.6rem, 3vw, 2.2rem);
+  display: grid;
+  gap: 0.9rem;
+}
+
+.levels__bundle-card header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.levels__bundle-card h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 1.1rem;
+}
+
+.levels__bundle-card span {
+  color: #ff6f48;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.levels__bundle-card ul {
+  list-style: none;
+  display: grid;
+  gap: 0.55rem;
+  padding: 0;
+  margin: 0;
+}
+
+.levels__bundle-card li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  color: var(--color-text-secondary, #cdcdcd);
+}
+
+.levels__bundle-card i {
+  color: #ff6f48;
+  margin-top: 0.2rem;
+}
+
+@media (max-width: 960px) {
+  .levels__panel {
+    border-radius: 28px;
+  }
+
+  .levels__bundle-card {
+    border-radius: 22px;
+  }
+}
+
+@media (max-width: 720px) {
+  .levels {
+    padding-bottom: clamp(5rem, 15vw, 6.5rem);
+  }
+
+  .levels__chips {
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .levels__chip,
+  .levels__panel {
+    transition: none;
+  }
+}
