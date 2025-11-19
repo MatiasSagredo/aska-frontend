@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import Hero from '../components/organisms/Hero.jsx'
 import BeltUnlock from '../components/organisms/BeltUnlock.jsx'
 import GearShowcase from '../components/organisms/GearShowcase.jsx'
-import Footer from '../components/organisms/Footer.jsx'
 
 function scrollToTarget(target) {
   if (!target) {
@@ -47,7 +46,6 @@ function Home({
       <Hero onPrimaryAction={onAuthTrigger} onSecondaryAction={onCatalogNavigate} />
       <BeltUnlock />
       <GearShowcase onCatalogNavigate={onCatalogCategory} />
-      <Footer />
     </>
   )
 }
