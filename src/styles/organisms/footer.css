@@ -34,15 +34,19 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 80px;
-  height: 80px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-soft));
-  color: #000;
+  width: 86px;
+  height: 86px;
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 28% 28%, rgba(255, 255, 255, 0.24), transparent 60%),
+    linear-gradient(135deg, #ff3d68, var(--color-primary));
+  color: #0a0204;
   font-family: var(--font-heading);
-  font-size: 1.9rem;
-  letter-spacing: 0.14em;
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .footer__socials {

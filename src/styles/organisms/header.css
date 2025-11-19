@@ -58,15 +58,19 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-soft));
-  color: #000;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.28), transparent 55%),
+    linear-gradient(135deg, #ff416c, var(--color-primary));
+  color: #0a0204;
   font-family: var(--font-heading);
-  font-size: 1.4rem;
-  letter-spacing: 0.14em;
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
 }
 
 .header__wordmark {

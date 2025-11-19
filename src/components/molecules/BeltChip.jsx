@@ -3,6 +3,14 @@ import Icon from '../atoms/Icon.jsx'
 import '../../styles/molecules/belt-chip.css'
 
 function BeltChip({ label, active, gradient, exclusive, onClick }) {
+  let iconName = 'fa-lock'
+
+  if (exclusive && active) {
+    iconName = 'fa-crown'
+  } else if (!exclusive && active) {
+    iconName = 'fa-unlock'
+  }
+
   return (
     <button
       type="button"
@@ -15,7 +23,7 @@ function BeltChip({ label, active, gradient, exclusive, onClick }) {
       <span>{label}</span>
       <Icon
         prefix="fa-solid"
-        name={exclusive ? (active ? 'fa-crown' : 'fa-lock') : active ? 'fa-unlock' : 'fa-lock'}
+        name={iconName}
         className="belt-chip__icon"
       />
     </button>
