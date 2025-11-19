@@ -1,5 +1,4 @@
 import { useMemo } from 'react'
-import Footer from '../components/organisms/Footer.jsx'
 import '../styles/pages/contact.css'
 
 const contactChannels = [
@@ -185,7 +184,6 @@ function Contact() {
           </form>
         </div>
       </section>
-      <Footer includeAnchorId={false} />
     </>
   )
 }

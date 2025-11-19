@@ -1,9 +1,10 @@
 import { useCallback, useState } from 'react'
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom'
 import './App.css'
-import Header from './components/organisms/Header.jsx'
 import ParticleBackground from './components/templates/ParticleBackground.jsx'
 import AuthModal from './components/templates/AuthModal.jsx'
+import Header from './components/organisms/Header.jsx'
+import Footer from './components/organisms/Footer.jsx'
 import Home from './pages/Home.jsx'
 import Catalog from './pages/Catalog.jsx'
 import Contact from './pages/Contact.jsx'
@@ -110,6 +111,7 @@ function App() {
           <Route path="/contacto" element={<Contact />} />
         </Routes>
       </div>
+      <Footer includeAnchorId={location.pathname === '/'} />
       <AuthModal isOpen={isAuthOpen} onClose={closeAuth} />
     </div>
   )
