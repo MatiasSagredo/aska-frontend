@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useLocation } from 'react-router-dom'
-import Footer from '../components/organisms/Footer.jsx'
 import '../styles/pages/catalog.css'
 
 const catalogSections = [
@@ -313,7 +312,6 @@ function Catalog() {
           })}
         </div>
       </section>
-      <Footer />
     </>
   )
 }

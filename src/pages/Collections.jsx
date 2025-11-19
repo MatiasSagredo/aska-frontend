@@ -1,4 +1,3 @@
-import Footer from '../components/organisms/Footer.jsx'
 import '../styles/pages/collections.css'
 
 const collectionHighlights = [
@@ -170,7 +169,6 @@ function Collections() {
           </div>
         </section>
       </section>
-      <Footer includeAnchorId={false} />
     </>
   )
 }

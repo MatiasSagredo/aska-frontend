@@ -1,5 +1,4 @@
 import { useMemo, useState } from 'react'
-import Footer from '../components/organisms/Footer.jsx'
 import '../styles/pages/levels.css'
 
 const levels = [
@@ -176,7 +175,6 @@ function Levels() {
           </div>
         </article>
       </section>
-      <Footer includeAnchorId={false} />
     </>
   )
 }

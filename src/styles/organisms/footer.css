@@ -4,6 +4,7 @@
   background: linear-gradient(180deg, rgba(5, 5, 7, 0.96) 0%, rgba(2, 2, 3, 0.98) 70%);
   border-top: 1px solid rgba(215, 38, 61, 0.18);
   color: var(--color-text-secondary);
+  margin-top: auto;
 }
 
 .footer__gradient {
