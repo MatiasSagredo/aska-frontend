@@ -10,7 +10,6 @@ import Catalog from './pages/Catalog.jsx'
 import Contact from './pages/Contact.jsx'
 import Collections from './pages/Collections.jsx'
 import Levels from './pages/Levels.jsx'
-import Footer from './components/organisms/Footer.jsx'
 
 function App() {
   const [isAuthOpen, setAuthOpen] = useState(false)
