@@ -118,6 +118,7 @@ function App() {
           <Route path="/contacto" element={<Contact />} />
         </Routes>
       </div>
+      <button onClick={() => {Api.color.deleteColorById(12)}}>apretar</button>
       <Footer includeAnchorId={location.pathname === '/'} />
       <AuthModal isOpen={isAuthOpen} onClose={closeAuth} />
     </div>
