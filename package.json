@@ -16,6 +16,7 @@
     "@tsparticles/shape-circle": "^3.9.1",
     "@tsparticles/shape-square": "^3.9.1",
     "@tsparticles/slim": "^3.9.1",
+    "axios": "^1.13.2",
     "prop-types": "^15.8.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
@@ -25,6 +26,7 @@
   "devDependencies": {
     "@eslint/js": "^9.36.0",
     "@tailwindcss/vite": "^4.1.17",
+    "@types/axios": "^0.9.36",
     "@types/react": "^19.1.16",
     "@types/react-dom": "^19.1.9",
     "@vitejs/plugin-react": "^5.0.4",

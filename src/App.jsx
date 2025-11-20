@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom'
 import './App.css'
 import ParticleBackground from './components/templates/ParticleBackground.jsx'
@@ -10,15 +10,22 @@ import Catalog from './pages/Catalog.jsx'
 import Contact from './pages/Contact.jsx'
 import Collections from './pages/Collections.jsx'
 import Levels from './pages/Levels.jsx'
+import Api from './api/api.js'
 
 function App() {
   const [isAuthOpen, setAuthOpen] = useState(false)
   const [pendingScrollTarget, setPendingScrollTarget] = useState(null)
+  const [color] = useState(async() => {await Api.color.getAll()})
   const navigate = useNavigate()
   const location = useLocation()
 
   const openAuth = useCallback(() => setAuthOpen(true), [])
   const closeAuth = useCallback(() => setAuthOpen(false), [])
+  useEffect(() => {
+    Api.color.getAll().then((data) => {
+      console.log(data)
+    })
+  }, [])
 
   const handleNavigate = useCallback(
     (target) => {
