@@ -1,0 +1,6 @@
+@reference "../../index.css";
+
+.tag {
+  @apply items-center justify-center px-1.5 py-3.5 inline-flex bg-[#ffffff]/10 border-[#d7263d33] text-sm uppercase;
+  letter-spacing: 0.08em;
+}

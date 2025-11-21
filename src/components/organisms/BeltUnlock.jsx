@@ -55,6 +55,7 @@ function BeltUnlock() {
   const selected = useMemo(() => belts.find((belt) => belt.id === selectedId) ?? belts[0], [selectedId])
 
   return (
+    <>
     <section className="belt" id="bundles">
       <div className="belt__header">
         <span className="belt__eyebrow">Progresión Aska</span>
@@ -89,7 +90,6 @@ function BeltUnlock() {
           )
         })}
       </div>
-
       <article className="belt__panel" role="tabpanel">
         <header className="belt__panel-header">
           <div className="belt__panel-badge" style={{ '--belt-gradient': selected.gradient }}>
@@ -122,6 +122,7 @@ function BeltUnlock() {
         </div>
       </article>
     </section>
+    </>
   )
 }
 

@@ -6,5 +6,5 @@
 .app__content {
   @apply relative z-1 grid;
   gap: clamp(4rem, 7vw, 6rem);
-  padding: clamp(3rem, 8vw, 5rem) 0 clamp(4rem, 7vw, 6rem);
+
 }

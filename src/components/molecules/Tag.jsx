@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types'
-import '../../styles/atoms/tag.css'
+import '../../styles/molecules/tag.css'
+import Text from '../atoms/Text.jsx'
 
 function Tag({ children, className }) {
-  return <span className={['tag', className].filter(Boolean).join(' ')}>{children}</span>
+  return <Text className={['tag', className].filter(Boolean).join(' ')}>{children}</Text>
 }
 
 Tag.propTypes = {

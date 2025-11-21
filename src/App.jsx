@@ -10,22 +10,15 @@ import Catalog from './pages/Catalog.jsx'
 import Contact from './pages/Contact.jsx'
 import Collections from './pages/Collections.jsx'
 import Levels from './pages/Levels.jsx'
-import Api from './api/api.js'
 
 function App() {
   const [isAuthOpen, setAuthOpen] = useState(false)
   const [pendingScrollTarget, setPendingScrollTarget] = useState(null)
-  const [color] = useState(async() => {await Api.color.getAll()})
   const navigate = useNavigate()
   const location = useLocation()
 
   const openAuth = useCallback(() => setAuthOpen(true), [])
   const closeAuth = useCallback(() => setAuthOpen(false), [])
-  useEffect(() => {
-    Api.color.getAll().then((data) => {
-      console.log(data)
-    })
-  }, [])
 
   const handleNavigate = useCallback(
     (target) => {
@@ -118,7 +111,6 @@ function App() {
           <Route path="/contacto" element={<Contact />} />
         </Routes>
       </div>
-      <button onClick={() => {Api.color.deleteColorById(12)}}>apretar</button>
       <Footer includeAnchorId={location.pathname === '/'} />
       <AuthModal isOpen={isAuthOpen} onClose={closeAuth} />
     </div>

@@ -28,11 +28,3 @@
 body {
   @apply text-text-primary bg-radial from-bg-from via-bg-via to-bg min-h-screen;
 }
-
-a {
-  @apply text-inherit no-underline;
-}
-
-button {
-  font-family: inherit;
-}

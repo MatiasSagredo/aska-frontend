@@ -16,7 +16,7 @@ let instance = axios.create({
 const disiplina = {
     /** @returns {Promise<Array<Disiplina>>} */
     getAll: async () => {
-        const response = await instance.get('/disiplina');
+        const response = await instance.get('/diciplina');
         return response.data;
     },
     /**
@@ -24,14 +24,14 @@ const disiplina = {
      * @returns {Promise<Disiplina>}
      */
     getById: async (id) => {
-        const response = await instance.get(`/disiplina/${id}`);
+        const response = await instance.get(`/diciplina/${id}`);
         return response.data;
     },
     /**
      * @param {Disiplina} data - Datos de la disiplina a crear
      * @returns {Promise<Disiplina>} */
     createDisiplina: async (data) => {
-        const response = await instance.post('/disiplina', data);
+        const response = await instance.post('/diciplina', data);
         return response.data;
     },
     /** 
@@ -40,7 +40,7 @@ const disiplina = {
      * @returns {Promise<Disiplina>} 
      */
     updateDisiplinaById: async (id, data) => {
-        const response = await instance.put(`/disiplina/${id}`, data);
+        const response = await instance.put(`/diciplina/${id}`, data);
         return response.data;
     },
     /** 
@@ -48,14 +48,14 @@ const disiplina = {
      * @param {Partial<Disiplina>} data - Datos parciales de la disiplina a actualizar
      * @returns {Promise<Disiplina>} */
     patchDisiplinaById: async (id, data) => {
-        const response = await instance.patch(`/disiplina/${id}`, data);
+        const response = await instance.patch(`/diciplina/${id}`, data);
         return response.data;
     },
     /** 
      * @param {number} id - ID de la disiplina a eliminar
      * @returns {Promise<void>} */
     deleteDisiplinaById: async (id) => {
-        const response = await instance.delete(`/disiplina/${id}`);
+        const response = await instance.delete(`/diciplina/${id}`);
         return response.data;
     },
 };
